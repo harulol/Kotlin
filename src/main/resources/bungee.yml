@@ -1,0 +1,5 @@
+name: Kotlin
+version: 1.5.20-RC
+main: dev.hawu.plugins.KotlinBungeeJVM
+description: Introduces Kotlin to Bungee's classpath
+author: JetBrains
