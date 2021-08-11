@@ -1,5 +1,5 @@
 name: Kotlin
-version: 1.5.20-RC
-main: dev.hawu.plugins.KotlinBungeeJVM
-description: Introduces Kotlin to Bungee's classpath
+main: dev.hawu.plugins.kotlin.bungee.BungeeEntrypoint
+version: @VERSION@
 author: JetBrains
+description: Introduces Kotlin's standard, serialization and coroutines library to Bungee.

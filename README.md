@@ -1,34 +1,36 @@
 <div align="center">
   
 # Kotlin
-Introduces Kotlin to Bukkit and Bungee.
+![GitHub](https://img.shields.io/github/license/harulol/kotlin?style=plastic) ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/harulol/kotlin?include_prereleases&style=plastic)
 </div>
 
-# How install?
-Well, how do you install your other plugins?
-Yea.
+### Installation
+Just install like any other plugins. It's just a jar with libraries.
+
+### FaQs
+
 <details>
-  <summary>If you actually don't know</summary>
-Drop this and any plugins file in well, the plugins folder in the server's directory?
-I think it's pretty self-explanatory on how you install plugins.
+<summary>There are only 2 empty files!</summary>
+
+This project only shades Kotlin's std-lib and reflection library in. It does not add any additional features.
 </details>
-<br>
 
-# FaQs
-### There nothing in this!
-It only shaded Kotlin in and that's it. What do you expect?
-
-### Can me resolve as dependency?
-Use JetBrains' provided dependencies for Kotlin. This is just a jar file that saves you from having to shade the entire std-lib in.
-
-### But me no understand, what the point of this?
-Saves the developer dudes from having to shade the ENTIRE std-lib for Kotlin in EVERY single project that uses the language.
-
-### What name so me can depend in plugin.yml?
-It's just "Kotlin".
 <details>
-  <summary>Example</summary>
-  
+<summary>Should I add this as a dependency?</summary>
+
+For Maven/Gradle, no. Use JetBrains' dependencies instead.
+If you can shade and relocate yourself, it's ok to not depend on this in `plugin.yml`.
+</details>
+
+<details>
+<summary>What's the point of this?</summary>
+
+This file saves Kotlin dudes from having to shade the standard library for Kotlin in every project that may use the language. And most of them don't know how relocations work, so it keeps leading to classpath pollution and other nasty things.
+</details>
+
+<details>
+<summary>How to depend on this in plugin.yml?</summary>
+
 ```yaml
   name: YourAmazingPluginUwU
   main: ur.things.idk
@@ -37,5 +39,23 @@ It's just "Kotlin".
 ```
 </details>
 
-### Me thought there are already these out there?
-Yea, but JetBrains pushed hot 1.5.0 updates that scream at your face that the methods you were using are deprecated.
+<details>
+<summary>Aren't there already similar projects like this?</summary>
+
+Yes there are. But usually, they update really slowly, use weird versioning conventions or don't properly credit the Kotlin foundation.
+</details>
+
+### Legal Notice
+This project does not have any written permissions from the foundation.<br>
+Kotlin is licensed under Apache License 2.0.<br>
+This project is not affiliated with JetBrains, the Kotlin Foundation or any of their sponsors and affiliates.
+
+Until an official notice from them, this project still has the name Kotlin, considering their brand usages:
+- Identify that **your software is written in the Kotlin programming language**
+- Is **compatible** with the Kotlin programming language
+- **Targets** the **Kotlin** programming language
+- Is **for use with** the **Kotlin** programming language
+- **Contains** the **Kotlin** programming language.
+- **Aims to promote** or teach the **Kotlin** programming language
+
+The use must be referential and describe the relationship of your products or services to the Kotlin programming language.

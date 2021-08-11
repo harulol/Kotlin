@@ -1,7 +1,7 @@
 name: Kotlin
-version: 1.5.20-RC
-main: dev.hawu.plugins.kotlin.KotlinBukkitJVM
-description: Introduces Kotlin to Bukkit's classpath
-website: https://kotlinlang.com
-author: JetBrains
+version: @VERSION@
+main: dev.hawu.plugins.kotlin.bukkit.BukkitEntrypoint
+description: Introduces Kotlin's standard, serialization and coroutines library to Bukkit.
 load: STARTUP
+website: https://kotlinlang.org
+author: JetBrains
