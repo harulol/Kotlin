@@ -1,14 +1,14 @@
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 
 plugins {
-    kotlin("jvm") version "1.5.21"
-    kotlin("plugin.serialization") version "1.5.21"
+    kotlin("jvm") version "1.5.30"
+    kotlin("plugin.serialization") version "1.5.30"
     java
     id("com.github.johnrengelman.shadow") version "7.0.0"
 }
 
 group = "dev.hawu.plugins"
-version = "1.5.21"
+version = "1.5.30"
 
 repositories {
     mavenCentral()
@@ -21,14 +21,15 @@ val shade by configurations.creating {
 }
 
 dependencies {
-    shade(kotlin("stdlib"))
-    shade("org.jetbrains:annotations:21.0.1")
-    shade("org.jetbrains.kotlin:kotlin-reflect:1.5.21")
+    shade("org.jetbrains.kotlin:kotlin-stdlib:1.5.30")
+    shade("org.jetbrains:annotations:22.0.0")
+    shade("org.jetbrains.kotlin:kotlin-reflect:1.5.30")
+    shade("org.jetbrains.kotlin:kotlin-serialization:1.5.30")
     implementation("org.bukkit:bukkit:1.8-R0.1-SNAPSHOT")
-    implementation("net.md-5:bungeecord-api:1.8-SNAPSHOT")
+    implementation("net.md-5:bungeecord-api:1.16-R0.4")
 
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.2")
 }
 
 tasks.getByName<Test>("test") {
@@ -40,9 +41,10 @@ tasks.getByName<ShadowJar>("shadowJar") {
     
     configurations = listOf(shade)
     dependencies {
-        include(dependency(dependencies.kotlin("stdlib")))
+        include(dependency("org.jetbrains.kotlin:kotlin-stdlib:.*"))
         include(dependency("org.jetbrains:annotations:.*"))
         include(dependency("org.jetbrains.kotlin:kotlin-reflect:.*"))
+        include(dependency("org.jetbrains.kotlin:kotlin-serialization:.*"))
     }
 }
 
