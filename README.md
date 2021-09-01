@@ -4,6 +4,13 @@
 ![GitHub](https://img.shields.io/github/license/harulol/kotlin?style=plastic) ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/harulol/kotlin?include_prereleases&style=plastic)
 </div>
 
+# NOTICE
+This plugin is now deprecated. This will no longer receive maintenance in favor of the new repository for multiple JVM languages at the same time [here](https://github.com/harulol/multi-jvm-lang).
+Favor using the other repository as it packs `Kotlin`, `Groovy` and `Scala` all in one jar.
+
+
+# Instructions below may be deprecated.
+
 ### Installation
 Just install like any other plugins. It's just a jar with libraries.
 
